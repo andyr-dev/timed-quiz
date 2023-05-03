@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <link href="./Assets/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap"
+      rel="stylesheet"
+    />
+    <title>Timed Quiz</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="timer">
+        <span id="countdown" class = "timer">Time: 60</span>
+      </div>
+      <div id="question-box" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="answer-box">
+        </div>
+      </div>
+      <div id="resultMsg" class="hide">
+        <p id="score"></p>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="btn start-btn">Start</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
