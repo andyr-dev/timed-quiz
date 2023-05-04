@@ -92,12 +92,12 @@ function startQuiz() {
 
   // shows the question and answers options based on the index of the displayQuestions variable
   function showQuestion(displayQuestions) {
-    console.log(displayQuestions);
     questionEl.innerText = displayQuestions.question;
     displayQuestions.answers.forEach((answer) => {
       var button = document.createElement("button");
       button.classList.add("ans-btns");
       button.innerText = answer.text;
+      button.dataset.correct = answer.correct;
       // listens for the selected Answer click event and runs the function to check the answer
       button.addEventListener("click", selectAnswer);
       answerBox.appendChild(button);
@@ -106,6 +106,7 @@ function startQuiz() {
   function selectAnswer(event) {
     var selectedAnswer = event.target;
     var correct = selectedAnswer.dataset.correct;
+
     setStatusClass(selectedAnswer, correct);
     Array.from(answerBtns).forEach((button) => {
       if (button.dataset.correct === "true") {
